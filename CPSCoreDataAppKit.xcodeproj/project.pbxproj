@@ -1,0 +1,665 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
+		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		F81CCA9E10958AAA00605C3C /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81CCA9D10958AAA00605C3C /* AddressBook.framework */; };
+		F81CCAFA1095CD4800605C3C /* CPSNSObjectUnproyAdditionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F81CCAF91095CD4800605C3C /* CPSNSObjectUnproyAdditionTest.m */; };
+		F81CCB7C10964C4200605C3C /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81CCB7B10964C4200605C3C /* AddressBook.framework */; };
+		F824A44E12943C1200746CBD /* CPSCoreDataAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* CPSCoreDataAppKit.framework */; };
+		F826FDD4109B17CE00274E8A /* CPSCoreDataAppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F89FD3D21096DDAA00C59017 /* CPSCoreDataAppKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F84E0DDF12946C5400E612FF /* CPSABProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = F84E0DDD12946C5400E612FF /* CPSABProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F870E5DF1294273700C63D6C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F870E5DE1294273700C63D6C /* CoreData.framework */; };
+		F870E5E31294275300C63D6C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F870E5E21294275300C63D6C /* Cocoa.framework */; };
+		F870E5E61294275C00C63D6C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F870E5DE1294273700C63D6C /* CoreData.framework */; };
+		F87EE0F6109833A5008DAEBA /* CPSABPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = F87EE0F4109833A4008DAEBA /* CPSABPicker.xib */; };
+		F87EE0FA109833E4008DAEBA /* CPSABPickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = F87EE0F8109833E4008DAEBA /* CPSABPickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F87EE0FB109833E4008DAEBA /* CPSABPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F87EE0F9109833E4008DAEBA /* CPSABPickerController.m */; };
+		F8C3BB671096D60500F2F3BA /* CPSABReference.h in Headers */ = {isa = PBXBuildFile; fileRef = F8C3BB651096D60400F2F3BA /* CPSABReference.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8C3BB681096D60500F2F3BA /* CPSABReference.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C3BB661096D60400F2F3BA /* CPSABReference.m */; };
+		F8C3BB701096D61300F2F3BA /* ABRefImplTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C3BB6C1096D61300F2F3BA /* ABRefImplTest.m */; };
+		F8C3BB711096D61300F2F3BA /* CPSABReferenceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C3BB6E1096D61300F2F3BA /* CPSABReferenceTest.m */; };
+		F8C3BB721096D61300F2F3BA /* TestCPSABRefModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = F8C3BB6F1096D61300F2F3BA /* TestCPSABRefModel.xcdatamodel */; };
+		F8ECBB14124C94FE00DC4264 /* CPSCalPickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = F8ECBB12124C94FE00DC4264 /* CPSCalPickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8ECBB15124C94FE00DC4264 /* CPSCalPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8ECBB13124C94FE00DC4264 /* CPSCalPickerController.m */; };
+		F8ECBB18124C952300DC4264 /* CPSCalPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8ECBB16124C952300DC4264 /* CPSCalPicker.xib */; };
+		F8ECBB1F124C958F00DC4264 /* CalendarStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8ECBB1E124C958F00DC4264 /* CalendarStore.framework */; };
+		F8ECBB3B124C968300DC4264 /* CalendarStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8ECBB1E124C958F00DC4264 /* CalendarStore.framework */; };
+		F8F27A801094E80700FCF751 /* CPSNSObjectUnproxyAddition.h in Headers */ = {isa = PBXBuildFile; fileRef = F8F27A7E1094E80700FCF751 /* CPSNSObjectUnproxyAddition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8F27A811094E80700FCF751 /* CPSNSObjectUnproxyAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F27A7F1094E80700FCF751 /* CPSNSObjectUnproxyAddition.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F870E58012941A7D00C63D6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = CPSCoreDataAppKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		32DBCF5E0370ADEE00C91783 /* CPSCoreDataAppKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSCoreDataAppKit_Prefix.pch; sourceTree = "<group>"; };
+		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DC2EF5B0486A6940098B216 /* CPSCoreDataAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CPSCoreDataAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		F801D9BF124CB6BF00E2BA7B /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/CPSCalPicker.xib; sourceTree = SOURCE_ROOT; };
+		F81CCA9D10958AAA00605C3C /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = /System/Library/Frameworks/AddressBook.framework; sourceTree = "<absolute>"; };
+		F81CCAF81095CD4800605C3C /* CPSNSObjectUnproyAdditionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSNSObjectUnproyAdditionTest.h; sourceTree = "<group>"; };
+		F81CCAF91095CD4800605C3C /* CPSNSObjectUnproyAdditionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPSNSObjectUnproyAdditionTest.m; sourceTree = "<group>"; };
+		F81CCB7B10964C4200605C3C /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		F84E0DDD12946C5400E612FF /* CPSABProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSABProtocol.h; sourceTree = "<group>"; };
+		F86FF462107DEDBB00BD5375 /* CPSCoreDataAppKitTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CPSCoreDataAppKitTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F86FF463107DEDBB00BD5375 /* CPSCoreDataAppKitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CPSCoreDataAppKitTest-Info.plist"; path = "../CPSCoreDataAppKitTest-Info.plist"; sourceTree = "<group>"; };
+		F870E5DE1294273700C63D6C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F870E5E21294275300C63D6C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F87EE0F310983336008DAEBA /* helpers.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = helpers.txt; sourceTree = "<group>"; };
+		F87EE0F5109833A4008DAEBA /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/CPSABPicker.xib; sourceTree = SOURCE_ROOT; };
+		F87EE0F7109833B6008DAEBA /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/CPSABPicker.xib; sourceTree = SOURCE_ROOT; };
+		F87EE0F8109833E4008DAEBA /* CPSABPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSABPickerController.h; sourceTree = "<group>"; };
+		F87EE0F9109833E4008DAEBA /* CPSABPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPSABPickerController.m; sourceTree = "<group>"; };
+		F89FD3D21096DDAA00C59017 /* CPSCoreDataAppKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSCoreDataAppKit.h; sourceTree = "<group>"; };
+		F8C3BB651096D60400F2F3BA /* CPSABReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSABReference.h; sourceTree = "<group>"; };
+		F8C3BB661096D60400F2F3BA /* CPSABReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPSABReference.m; sourceTree = "<group>"; };
+		F8C3BB6B1096D61300F2F3BA /* ABRefImplTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABRefImplTest.h; sourceTree = "<group>"; };
+		F8C3BB6C1096D61300F2F3BA /* ABRefImplTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABRefImplTest.m; sourceTree = "<group>"; };
+		F8C3BB6D1096D61300F2F3BA /* CPSABReferenceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSABReferenceTest.h; sourceTree = "<group>"; };
+		F8C3BB6E1096D61300F2F3BA /* CPSABReferenceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPSABReferenceTest.m; sourceTree = "<group>"; };
+		F8C3BB6F1096D61300F2F3BA /* TestCPSABRefModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = TestCPSABRefModel.xcdatamodel; sourceTree = "<group>"; };
+		F8D817E312950D0300B06353 /* CPSABReference.xcclassmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcclassmodel; path = CPSABReference.xcclassmodel; sourceTree = "<group>"; };
+		F8ECBB12124C94FE00DC4264 /* CPSCalPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSCalPickerController.h; sourceTree = "<group>"; };
+		F8ECBB13124C94FE00DC4264 /* CPSCalPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPSCalPickerController.m; sourceTree = "<group>"; };
+		F8ECBB17124C952300DC4264 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/CPSCalPicker.xib; sourceTree = SOURCE_ROOT; };
+		F8ECBB1E124C958F00DC4264 /* CalendarStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalendarStore.framework; path = System/Library/Frameworks/CalendarStore.framework; sourceTree = SDKROOT; };
+		F8F27A7E1094E80700FCF751 /* CPSNSObjectUnproxyAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSNSObjectUnproxyAddition.h; sourceTree = "<group>"; };
+		F8F27A7F1094E80700FCF751 /* CPSNSObjectUnproxyAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPSNSObjectUnproxyAddition.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DC2EF560486A6940098B216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8ECBB3B124C968300DC4264 /* CalendarStore.framework in Frameworks */,
+				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
+				F81CCA9E10958AAA00605C3C /* AddressBook.framework in Frameworks */,
+				F870E5DF1294273700C63D6C /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F86FF45F107DEDBB00BD5375 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F81CCB7C10964C4200605C3C /* AddressBook.framework in Frameworks */,
+				F8ECBB1F124C958F00DC4264 /* CalendarStore.framework in Frameworks */,
+				F870E5E31294275300C63D6C /* Cocoa.framework in Frameworks */,
+				F870E5E61294275C00C63D6C /* CoreData.framework in Frameworks */,
+				F824A44E12943C1200746CBD /* CPSCoreDataAppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5B0486A6940098B216 /* CPSCoreDataAppKit.framework */,
+				F86FF462107DEDBB00BD5375 /* CPSCoreDataAppKitTest.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* CPSCoreDataAppKit */ = {
+			isa = PBXGroup;
+			children = (
+				F8D817E212950D0300B06353 /* doc */,
+				F87EE0F210983317008DAEBA /* Helpers */,
+				F89FD3D11096DD8400C59017 /* Public Headers */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				F86FF45C107DED6D00BD5375 /* Test */,
+				F81CCB7B10964C4200605C3C /* AddressBook.framework */,
+				F870E5DE1294273700C63D6C /* CoreData.framework */,
+				F870E5E21294275300C63D6C /* Cocoa.framework */,
+			);
+			name = CPSCoreDataAppKit;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5A0486A6940098B216 /* Info.plist */,
+				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F87EE0E510983236008DAEBA /* ABPicker */,
+				F8C3BB641096D60400F2F3BA /* ABReference */,
+				F8ECBB11124C94FE00DC4264 /* CalPicker */,
+				F8F27A7D1094E7BE00FCF751 /* NSObjectUnproxyAddition */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+				F81CCA9D10958AAA00605C3C /* AddressBook.framework */,
+				F8ECBB1E124C958F00DC4264 /* CalendarStore.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+				D2F7E79907B2D74100F64583 /* CoreData.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF5E0370ADEE00C91783 /* CPSCoreDataAppKit_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		F81CCAF71095CD4800605C3C /* Test-NSObjectUnproxyAddition */ = {
+			isa = PBXGroup;
+			children = (
+				F81CCAF81095CD4800605C3C /* CPSNSObjectUnproyAdditionTest.h */,
+				F81CCAF91095CD4800605C3C /* CPSNSObjectUnproyAdditionTest.m */,
+			);
+			name = "Test-NSObjectUnproxyAddition";
+			path = "../Test/Test-NSObjectUnproxyAddition";
+			sourceTree = "<group>";
+		};
+		F86FF45C107DED6D00BD5375 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				F86FF463107DEDBB00BD5375 /* CPSCoreDataAppKitTest-Info.plist */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		F87EE0E510983236008DAEBA /* ABPicker */ = {
+			isa = PBXGroup;
+			children = (
+				F87EE0F4109833A4008DAEBA /* CPSABPicker.xib */,
+				F87EE0E610983266008DAEBA /* Test-ABPicker */,
+				F87EE0F8109833E4008DAEBA /* CPSABPickerController.h */,
+				F87EE0F9109833E4008DAEBA /* CPSABPickerController.m */,
+			);
+			path = ABPicker;
+			sourceTree = "<group>";
+		};
+		F87EE0E610983266008DAEBA /* Test-ABPicker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Test-ABPicker";
+			path = "../Test/Test-ABPicker";
+			sourceTree = "<group>";
+		};
+		F87EE0F210983317008DAEBA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F87EE0F310983336008DAEBA /* helpers.txt */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		F89FD3D11096DD8400C59017 /* Public Headers */ = {
+			isa = PBXGroup;
+			children = (
+				F89FD3D21096DDAA00C59017 /* CPSCoreDataAppKit.h */,
+			);
+			name = "Public Headers";
+			sourceTree = "<group>";
+		};
+		F8C3BB641096D60400F2F3BA /* ABReference */ = {
+			isa = PBXGroup;
+			children = (
+				F8C3BB6A1096D61300F2F3BA /* Test-ABReference */,
+				F84E0DDD12946C5400E612FF /* CPSABProtocol.h */,
+				F8C3BB651096D60400F2F3BA /* CPSABReference.h */,
+				F8C3BB661096D60400F2F3BA /* CPSABReference.m */,
+			);
+			path = ABReference;
+			sourceTree = "<group>";
+		};
+		F8C3BB6A1096D61300F2F3BA /* Test-ABReference */ = {
+			isa = PBXGroup;
+			children = (
+				F8C3BB6B1096D61300F2F3BA /* ABRefImplTest.h */,
+				F8C3BB6C1096D61300F2F3BA /* ABRefImplTest.m */,
+				F8C3BB6D1096D61300F2F3BA /* CPSABReferenceTest.h */,
+				F8C3BB6E1096D61300F2F3BA /* CPSABReferenceTest.m */,
+				F8C3BB6F1096D61300F2F3BA /* TestCPSABRefModel.xcdatamodel */,
+			);
+			name = "Test-ABReference";
+			path = "../Test/Test-ABReference";
+			sourceTree = "<group>";
+		};
+		F8D817E212950D0300B06353 /* doc */ = {
+			isa = PBXGroup;
+			children = (
+				F8D817E312950D0300B06353 /* CPSABReference.xcclassmodel */,
+			);
+			path = doc;
+			sourceTree = "<group>";
+		};
+		F8ECBB11124C94FE00DC4264 /* CalPicker */ = {
+			isa = PBXGroup;
+			children = (
+				F8ECBB16124C952300DC4264 /* CPSCalPicker.xib */,
+				F8ECBB12124C94FE00DC4264 /* CPSCalPickerController.h */,
+				F8ECBB13124C94FE00DC4264 /* CPSCalPickerController.m */,
+			);
+			path = CalPicker;
+			sourceTree = "<group>";
+		};
+		F8F27A7D1094E7BE00FCF751 /* NSObjectUnproxyAddition */ = {
+			isa = PBXGroup;
+			children = (
+				F81CCAF71095CD4800605C3C /* Test-NSObjectUnproxyAddition */,
+				F8F27A7E1094E80700FCF751 /* CPSNSObjectUnproxyAddition.h */,
+				F8F27A7F1094E80700FCF751 /* CPSNSObjectUnproxyAddition.m */,
+			);
+			path = NSObjectUnproxyAddition;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8DC2EF500486A6940098B216 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8F27A801094E80700FCF751 /* CPSNSObjectUnproxyAddition.h in Headers */,
+				F8C3BB671096D60500F2F3BA /* CPSABReference.h in Headers */,
+				F87EE0FA109833E4008DAEBA /* CPSABPickerController.h in Headers */,
+				F826FDD4109B17CE00274E8A /* CPSCoreDataAppKit.h in Headers */,
+				F8ECBB14124C94FE00DC4264 /* CPSCalPickerController.h in Headers */,
+				F84E0DDF12946C5400E612FF /* CPSABProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DC2EF4F0486A6940098B216 /* CPSCoreDataAppKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "CPSCoreDataAppKit" */;
+			buildPhases = (
+				8DC2EF500486A6940098B216 /* Headers */,
+				8DC2EF520486A6940098B216 /* Resources */,
+				8DC2EF540486A6940098B216 /* Sources */,
+				8DC2EF560486A6940098B216 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CPSCoreDataAppKit;
+			productInstallPath = "@executable_path/../Frameworks";
+			productName = CPSCoreDataAppKit;
+			productReference = 8DC2EF5B0486A6940098B216 /* CPSCoreDataAppKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F86FF461107DEDBB00BD5375 /* CPSCoreDataAppKitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F86FF466107DEDBC00BD5375 /* Build configuration list for PBXNativeTarget "CPSCoreDataAppKitTest" */;
+			buildPhases = (
+				F86FF45D107DEDBB00BD5375 /* Resources */,
+				F86FF45E107DEDBB00BD5375 /* Sources */,
+				F86FF45F107DEDBB00BD5375 /* Frameworks */,
+				F86FF460107DEDBB00BD5375 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F870E58112941A7D00C63D6C /* PBXTargetDependency */,
+			);
+			name = CPSCoreDataAppKitTest;
+			productName = CPSCoreDataAppKitTest;
+			productReference = F86FF462107DEDBB00BD5375 /* CPSCoreDataAppKitTest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "CPSCoreDataAppKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				fr,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* CPSCoreDataAppKit */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DC2EF4F0486A6940098B216 /* CPSCoreDataAppKit */,
+				F86FF461107DEDBB00BD5375 /* CPSCoreDataAppKitTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DC2EF520486A6940098B216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
+				F87EE0F6109833A5008DAEBA /* CPSABPicker.xib in Resources */,
+				F8ECBB18124C952300DC4264 /* CPSCalPicker.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F86FF45D107DEDBB00BD5375 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F86FF460107DEDBB00BD5375 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DC2EF540486A6940098B216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8F27A811094E80700FCF751 /* CPSNSObjectUnproxyAddition.m in Sources */,
+				F8C3BB681096D60500F2F3BA /* CPSABReference.m in Sources */,
+				F87EE0FB109833E4008DAEBA /* CPSABPickerController.m in Sources */,
+				F8ECBB15124C94FE00DC4264 /* CPSCalPickerController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F86FF45E107DEDBB00BD5375 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F81CCAFA1095CD4800605C3C /* CPSNSObjectUnproyAdditionTest.m in Sources */,
+				F8C3BB701096D61300F2F3BA /* ABRefImplTest.m in Sources */,
+				F8C3BB711096D61300F2F3BA /* CPSABReferenceTest.m in Sources */,
+				F8C3BB721096D61300F2F3BA /* TestCPSABRefModel.xcdatamodel in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F870E58112941A7D00C63D6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DC2EF4F0486A6940098B216 /* CPSCoreDataAppKit */;
+			targetProxy = F870E58012941A7D00C63D6C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1667FE841158C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F87EE0F4109833A4008DAEBA /* CPSABPicker.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F87EE0F5109833A4008DAEBA /* English */,
+				F87EE0F7109833B6008DAEBA /* fr */,
+			);
+			name = CPSABPicker.xib;
+			sourceTree = "<group>";
+		};
+		F8ECBB16124C952300DC4264 /* CPSCalPicker.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8ECBB17124C952300DC4264 /* English */,
+				F801D9BF124CB6BF00E2BA7B /* fr */,
+			);
+			name = CPSCalPicker.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91AE08733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CPSCoreDataAppKit_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = CPSCoreDataAppKit;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		1DEB91AF08733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CPSCoreDataAppKit_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = CPSCoreDataAppKit;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		1DEB91B208733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		1DEB91B308733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Release;
+		};
+		F86FF464107DEDBB00BD5375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "CPSCoreDataAppKitTest-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+					"-ObjC",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = CPSCoreDataAppKitTest;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		F86FF465107DEDBB00BD5375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "CPSCoreDataAppKitTest-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+					"-ObjC",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = CPSCoreDataAppKitTest;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "CPSCoreDataAppKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91AE08733DA50010E9CD /* Debug */,
+				1DEB91AF08733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "CPSCoreDataAppKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91B208733DA50010E9CD /* Debug */,
+				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F86FF466107DEDBC00BD5375 /* Build configuration list for PBXNativeTarget "CPSCoreDataAppKitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F86FF464107DEDBB00BD5375 /* Debug */,
+				F86FF465107DEDBB00BD5375 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

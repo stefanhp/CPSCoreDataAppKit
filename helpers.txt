@@ -1,0 +1,10 @@
+// Generate string files
+mv ../CPSCoreDataAppKit-Localization/fr/_NewBase/CPSABPicker.xib.strings ../CPSCoreDataAppKit-Localization/fr/_OldBase/
+ibtool --export-strings-file ../CPSCoreDataAppKit-Localization/fr/_NewBase/CPSABPicker.xib.strings English.lproj/CPSABPicker.xib
+
+mv ../CPSCoreDataAppKit-Localization/fr/_NewBase/CPSCalPicker.xib.strings ../CPSCoreDataAppKit-Localization/fr/_OldBase/
+ibtool --export-strings-file ../CPSCoreDataAppKit-Localization/fr/_NewBase/CPSCalPicker.xib.strings English.lproj/CPSCalPicker.xib 
+
+// Update of french localization for all xib
+ibtool --strings-file ../CPSCoreDataAppKit-Localization/fr/_NewLoc/CPSABPicker.xib.strings --write fr.lproj/CPSABPicker.xib English.lproj/CPSABPicker.xib
+ibtool --strings-file ../CPSCoreDataAppKit-Localization/fr/_NewLoc/CPSCalPicker.xib.strings --write fr.lproj/CPSCalPicker.xib English.lproj/CPSCalPicker.xib
