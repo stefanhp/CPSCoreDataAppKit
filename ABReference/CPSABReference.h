@@ -15,6 +15,7 @@
 	NSString* secondaryLabel;
 }
 @property (retain) NSString * contactUID;
+@property (retain) NSString * compositeName;
 @property (retain) NSString * primaryLabel;
 @property (retain) NSString * secondaryLabel;
 
@@ -23,6 +24,9 @@
 
 @interface CPSABManagedObject (CPSABReference) <CPSABReferenceAccessing>
 + (NSString *)contactUIDFor:(CPSABManagedObject<CPSABReferenceStoring>*)managedObject;
++ (NSString *)compositeNameFor:(CPSABManagedObject<CPSABReferenceStoring>*)managedObject;
++ (void)archiveCompositeNameFor:(CPSABManagedObject<CPSABReferenceStoring>*)managedObject;
++ (NSArray*)matchingRecordsFor:(CPSABManagedObject<CPSABReferenceStoring>*)managedObject;
 + (NSString *)primaryLabelFor:(CPSABManagedObject<CPSABReferenceStoring>*)managedObject;
 + (NSString *)secondaryLabelFor:(CPSABManagedObject<CPSABReferenceStoring>*)managedObject;
 + (ABRecord *)abEntryFor:(CPSABManagedObject*)managedObject;
