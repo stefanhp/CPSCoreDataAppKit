@@ -80,6 +80,15 @@
 	[mo setSortOrder:CPSABRefOrderFirstLast];
 	STAssertTrue([[mo displayName] isEqualToString:@"John Doe"], @"Assignement failed (%@)", [mo displayName]);
 
+	// unlink-relink contactUID using compositename
+	[CPSABManagedObject archiveCompositeNameFor:mo]; // archive composite name
+	STAssertNotNil([CPSABManagedObject compositeNameFor:mo], @"Composite name should not be nil");
+	STAssertTrue([[CPSABManagedObject compositeNameFor:mo] isEqualToString:@"@@@John@@@Doe"], @"Composite name is wrong (%@)", [CPSABManagedObject compositeNameFor:mo]);
+	[mo setContactUID:nil]; // reset contact UID
+	STAssertNotNil([CPSABManagedObject abEntryFor:mo], @"Should find John Doe in AddressBook again (re-link)");
+	[mo setContactUID:@"00000000-0000-0000-0000-000000000000:ABPerson"]; // set contact UID to something wrong
+	STAssertNotNil([CPSABManagedObject abEntryFor:mo], @"Should find John Doe in AddressBook again (re-link)");
+	
 	// Read-only values
 	STAssertTrue([[mo firstName] isEqualToString:@"John"], @"Wrong first name (%@)", [mo firstName]);
 	STAssertTrue([[mo lastName] isEqualToString:@"Doe"], @"Wrong last name (%@)", [mo lastName]);

@@ -10,9 +10,13 @@
 #import <AddressBook/ABPerson.h>
 #import <AddressBook/ABAddressBookC.h>
 
+
+#define COMPOSITE_SEPARATOR @"@@@"
+
 @implementation CPSABManagedObject
 
 @dynamic contactUID;
+@dynamic compositeName;
 @synthesize primaryLabel;
 @synthesize secondaryLabel;
 
@@ -22,6 +26,71 @@
 
 + (NSString *)contactUIDFor:(CPSABManagedObject<CPSABReferenceStoring>*)managedObject{
 	return [managedObject contactUID];
+}
+
++ (NSString *)compositeNameFor:(CPSABManagedObject<CPSABReferenceStoring>*)managedObject{
+	return [managedObject compositeName];
+}
+
++ (void)archiveCompositeNameFor:(CPSABManagedObject<CPSABReferenceStoring>*)managedObject{
+	NSString *uid = [CPSABManagedObject contactUIDFor:managedObject];
+	if(uid != nil){
+		ABRecord* record = [[ABAddressBook sharedAddressBook] recordForUniqueId:uid];
+		NSString* current = [CPSABManagedObject compositeNameFor:managedObject];
+		NSString* company = [record valueForProperty:kABOrganizationProperty];
+		if(company == nil){
+			company = @"";
+		}
+		NSString* first = [record valueForProperty:kABFirstNameProperty];
+		if(first == nil){
+			first = @"";
+		}
+		NSString* last = [record valueForProperty:kABLastNameProperty];
+		if(last == nil){
+			last = @"";
+		}
+		NSArray* parts = [NSArray arrayWithObjects:company, first, last, nil];
+		NSString* newComposite = [parts componentsJoinedByString:COMPOSITE_SEPARATOR];
+		if(current !=nil && ([current compare:newComposite] == NSOrderedSame)){
+			// current and new composite are identical: do nothing
+			//NSlog(@"Already have proper composite value");
+		} else {
+			// Archive new value
+			//Dlog(@"Setting composite to: %@",newComposite);
+			[managedObject setCompositeName:newComposite];
+		}
+
+	}
+}
+
++ (NSArray*)matchingRecordsFor:(CPSABManagedObject<CPSABReferenceStoring>*)managedObject{
+	NSString *compositeName = [CPSABManagedObject compositeNameFor:managedObject];
+	if(compositeName != nil){
+		// Composite must exist meaning the record exsited once
+		NSArray* parts = [compositeName componentsSeparatedByString:COMPOSITE_SEPARATOR];
+		if([parts count] == 3){
+			ABSearchElement *company = [ABPerson searchElementForProperty:kABOrganizationProperty
+																	label:nil
+																	  key:nil
+																	value:[parts objectAtIndex:0]
+															   comparison:kABContainsSubStringCaseInsensitive];
+			ABSearchElement *first = [ABPerson searchElementForProperty:kABFirstNameProperty
+																  label:nil
+																	key:nil
+																  value:[parts objectAtIndex:1]
+															 comparison:kABContainsSubStringCaseInsensitive];
+			ABSearchElement *last = [ABPerson searchElementForProperty:kABLastNameProperty
+																 label:nil
+																   key:nil
+																 value:[parts objectAtIndex:2]
+															comparison:kABContainsSubStringCaseInsensitive];
+			ABSearchElement *companyAndFirstAndLast = [ABSearchElement searchElementForConjunction:kABSearchAnd
+																						  children:[NSArray arrayWithObjects:
+																									company, first, last, nil]];
+			return [[ABAddressBook sharedAddressBook] recordsMatchingSearchElement:companyAndFirstAndLast];
+		}
+	}
+	return [NSArray array];
 }
 
 + (NSString *)primaryLabelFor:(CPSABManagedObject<CPSABReferenceStoring>*)managedObject{
@@ -35,8 +104,20 @@
 + (ABRecord *)abEntryFor:(CPSABManagedObject*)managedObject{
 	NSString *uid = [CPSABManagedObject contactUIDFor:managedObject];
 	if(uid != nil){
-		return [[ABAddressBook sharedAddressBook] recordForUniqueId:uid];
+		ABRecord* record = [[ABAddressBook sharedAddressBook] recordForUniqueId:uid];
+		if(record != nil){
+			return record;
+		}
 	}
+	// No record for that UID, search a matching one
+	NSArray *matches = [CPSABManagedObject matchingRecordsFor:managedObject];
+	if([matches count] == 1){
+		// found a unique match, update UID and return that record
+		ABRecord* record = [matches objectAtIndex:0];
+		[managedObject setContactUID:[record uniqueId]];
+		return record;
+	}
+	
 	return nil;
 }
 
@@ -54,12 +135,16 @@
 	NSString *uid = [CPSABManagedObject contactUIDFor:abObject];
 	
 	if(uid != nil){
+		//NSLog(@"UID: %@", uid);
 		ABRecord *record = [[ABAddressBook sharedAddressBook] recordForUniqueId:uid];
 		if(record != nil){
+			//NSLog(@"Record: %@", record);
 			NSNumber *flags = [record valueForProperty:kABPersonFlags];
 			if([flags intValue] && kABShowAsCompany){ // Company
+				//NSLog(@"--Company");
 				return [record valueForProperty:kABOrganizationProperty];
 			} else { // Person
+				//NSLog(@"--Person");
 				NSString *firstName = [record valueForProperty:kABFirstNameProperty];
 				NSString *lastName = [record valueForProperty:kABLastNameProperty];
 				if(firstName != nil && lastName == nil){
