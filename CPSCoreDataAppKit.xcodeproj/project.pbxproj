@@ -505,6 +505,7 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = CPSCoreDataAppKit;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -525,6 +526,7 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = CPSCoreDataAppKit;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -595,6 +597,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = CPSCoreDataAppKitTest;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -627,6 +630,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = CPSCoreDataAppKitTest;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = octest;
 				ZERO_LINK = NO;
 			};
