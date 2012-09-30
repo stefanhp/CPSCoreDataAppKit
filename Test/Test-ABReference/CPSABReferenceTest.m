@@ -103,11 +103,13 @@
 	STAssertTrue([[mo secondaryLabel] isEqualToString:kABAIMWorkLabel], @"Wrong secondary label (%@)", [mo secondaryLabel]);
 	
 	// birthdate
-	NSDate *now = [NSDate date];
-	NSString *datestring = [NSString stringWithFormat:@"2001-03-24 12:00:00 %@",[[now description]substringFromIndex:20]]; // add local time zone
-	NSDate *theDate =[NSDate dateWithString:datestring]; // Beware: AB ignores time and default it to 12:00:00 +TZ
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+    dateFormatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+    dateFormatter.dateFormat = @"yyyy'-'MM'-'dd' 'HH':'mm";
+	NSDate *theDate =[dateFormatter dateFromString:@"2012-09-30 10:00"];
 	[mo setBirthdate:theDate];
-	STAssertTrue([[mo birthdate] isEqualToDate:theDate], @"Wrong birth date (%@)", [mo birthdate]);
+	STAssertTrue([[mo birthdate] isEqualToDate:theDate], @"Wrong birth date (%@ != %@)", theDate, [mo birthdate]);
 	
 	// mobile phone
 	NSString* theValue = @"mobile phone";
