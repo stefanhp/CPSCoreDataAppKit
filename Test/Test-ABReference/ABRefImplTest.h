@@ -16,7 +16,7 @@
 - (void)setSortOrder:(CPSABRefNameOrder)anOrder;
 - (CPSABRefNameOrder) sortOrder;
 
-@property (retain) NSString * testAttribute;
+@property (strong) NSString * testAttribute;
 
 @end
 

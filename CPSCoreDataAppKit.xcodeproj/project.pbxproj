@@ -57,9 +57,9 @@
 		F801D9BF124CB6BF00E2BA7B /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/CPSCalPicker.xib; sourceTree = SOURCE_ROOT; };
 		F81CCA9D10958AAA00605C3C /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = /System/Library/Frameworks/AddressBook.framework; sourceTree = "<absolute>"; };
 		F81CCAF81095CD4800605C3C /* CPSNSObjectUnproyAdditionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSNSObjectUnproyAdditionTest.h; sourceTree = "<group>"; };
-		F81CCAF91095CD4800605C3C /* CPSNSObjectUnproyAdditionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPSNSObjectUnproyAdditionTest.m; sourceTree = "<group>"; };
+		F81CCAF91095CD4800605C3C /* CPSNSObjectUnproyAdditionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CPSNSObjectUnproyAdditionTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		F81CCB7B10964C4200605C3C /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		F84E0DDD12946C5400E612FF /* CPSABProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSABProtocol.h; sourceTree = "<group>"; };
+		F84E0DDD12946C5400E612FF /* CPSABProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CPSABProtocol.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		F86FF462107DEDBB00BD5375 /* CPSCoreDataAppKitTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CPSCoreDataAppKitTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86FF463107DEDBB00BD5375 /* CPSCoreDataAppKitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CPSCoreDataAppKitTest-Info.plist"; path = "../CPSCoreDataAppKitTest-Info.plist"; sourceTree = "<group>"; };
 		F870E5DE1294273700C63D6C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -70,9 +70,9 @@
 		F87EE0F8109833E4008DAEBA /* CPSABPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSABPickerController.h; sourceTree = "<group>"; };
 		F87EE0F9109833E4008DAEBA /* CPSABPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPSABPickerController.m; sourceTree = "<group>"; };
 		F89FD3D21096DDAA00C59017 /* CPSCoreDataAppKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSCoreDataAppKit.h; sourceTree = "<group>"; };
-		F8C3BB651096D60400F2F3BA /* CPSABReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSABReference.h; sourceTree = "<group>"; };
+		F8C3BB651096D60400F2F3BA /* CPSABReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CPSABReference.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		F8C3BB661096D60400F2F3BA /* CPSABReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPSABReference.m; sourceTree = "<group>"; };
-		F8C3BB6B1096D61300F2F3BA /* ABRefImplTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABRefImplTest.h; sourceTree = "<group>"; };
+		F8C3BB6B1096D61300F2F3BA /* ABRefImplTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ABRefImplTest.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		F8C3BB6C1096D61300F2F3BA /* ABRefImplTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABRefImplTest.m; sourceTree = "<group>"; };
 		F8C3BB6D1096D61300F2F3BA /* CPSABReferenceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSABReferenceTest.h; sourceTree = "<group>"; };
 		F8C3BB6E1096D61300F2F3BA /* CPSABReferenceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPSABReferenceTest.m; sourceTree = "<group>"; };

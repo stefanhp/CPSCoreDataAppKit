@@ -17,9 +17,9 @@ typedef NSUInteger CPSABRefNameOrder;
 
 // Objects responding to the CPSABReferenceAccessing protocol should also conform to CPSABReferenceStoring
 @protocol CPSABReferenceStoring
-@property (retain) NSString * contactUID;
-@property (retain) NSString * primaryLabel;
-@property (retain) NSString * secondaryLabel;
+@property (strong) NSString * contactUID;
+@property (strong) NSString * primaryLabel;
+@property (strong) NSString * secondaryLabel;
 @end
 
 @protocol CPSABReferenceSorting

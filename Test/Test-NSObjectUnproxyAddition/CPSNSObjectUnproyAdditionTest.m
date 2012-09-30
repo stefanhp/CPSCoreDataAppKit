@@ -17,8 +17,8 @@
 	NSString* text2;
 	NSInteger* value;
 }
-@property(retain) NSString* text;
-@property(retain) NSString* text2;
+@property(strong) NSString* text;
+@property(strong) NSString* text2;
 @end
 
 @implementation CPSNSObjectUnproyAdditionTestInnerClass
