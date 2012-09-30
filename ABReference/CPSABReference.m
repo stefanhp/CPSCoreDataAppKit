@@ -235,9 +235,9 @@
 	NSData* data = [abObject pictureData];
 	NSImage* image = nil;
 	if(data != nil){
-		image = [[[NSImage alloc]initWithData:data]autorelease];
+		image = [[NSImage alloc]initWithData:data];
 	} else if([CPSABManagedObject isCompany:abObject]){
-		image = [[[NSImage alloc]initByReferencingFile:[[NSBundle mainBundle] pathForResource:@"company-48" ofType:@"png"]]autorelease];
+		image = [[NSImage alloc]initByReferencingFile:[[NSBundle mainBundle] pathForResource:@"company-48" ofType:@"png"]];
 	} else {
 		image = [NSImage imageNamed:NSImageNameUser];
 	}
@@ -261,7 +261,7 @@
 		}
 	}
 	if(primaryIndex < [addresses count]){
-		NSString* localizedValue = [(NSString*)ABCopyLocalizedPropertyOrLabel((CFStringRef)[addresses labelAtIndex:primaryIndex]) autorelease];
+		NSString* localizedValue = (__bridge NSString*)ABCopyLocalizedPropertyOrLabel((__bridge CFStringRef)[addresses labelAtIndex:primaryIndex]) ;
 		return [localizedValue capitalizedString];
 	}
 	return nil;
@@ -329,7 +329,7 @@
 	if(primaryIndex < [phones count]){
 		if(phones != nil){
 			NSString* value = [phones labelAtIndex:primaryIndex];
-			NSString* localizedValue =  [(NSString*)ABCopyLocalizedPropertyOrLabel((CFStringRef)value) autorelease];
+			NSString* localizedValue =  (__bridge NSString*)ABCopyLocalizedPropertyOrLabel((__bridge CFStringRef)value);
 			return [localizedValue capitalizedString];
 		}
 	}
@@ -364,7 +364,7 @@
 	if(primaryIndex < [emails count]){
 		if(emails != nil){
 			NSString* value = [emails labelAtIndex:primaryIndex];
-			NSString* localizedValue = [(NSString*)ABCopyLocalizedPropertyOrLabel((CFStringRef)value) autorelease];
+			NSString* localizedValue = (__bridge NSString*)ABCopyLocalizedPropertyOrLabel((__bridge CFStringRef)value);
 			return [localizedValue capitalizedString];
 		}
 	}
@@ -524,7 +524,7 @@
 		return;
 	}
 	ABRecord *record = [CPSABManagedObject abEntryFor:abObject];
-	ABMutableMultiValue *multiValue = [[[record valueForProperty:property]mutableCopy]autorelease];
+	ABMutableMultiValue *multiValue = [[record valueForProperty:property]mutableCopy];
 	NSUInteger primaryIndex = 0;
 	for(primaryIndex = 0; primaryIndex < [multiValue count]; primaryIndex++){
 		if([[multiValue labelAtIndex:primaryIndex] isEqualToString:label]){
@@ -532,7 +532,7 @@
 		}
 	}
 	if(primaryIndex < [multiValue count]){
-		NSMutableDictionary *existingValueDict = [[[multiValue valueAtIndex:primaryIndex]mutableCopy]autorelease];
+		NSMutableDictionary *existingValueDict = [[multiValue valueAtIndex:primaryIndex]mutableCopy];
 		if(existingValueDict != nil){
 			if(newValue != nil){
 				[existingValueDict setObject:newValue forKey:key];
@@ -551,7 +551,7 @@
 		// no entry yet
 		NSMutableDictionary *theValueDict = [NSMutableDictionary dictionaryWithObject:newValue forKey:key];
 		if(multiValue == nil){
-			multiValue = [[[ABMutableMultiValue alloc]init]autorelease];
+			multiValue = [[ABMutableMultiValue alloc]init];
 		}
 		[multiValue addValue:theValueDict withLabel:label];
 		[record setValue:multiValue forProperty:property];
@@ -564,7 +564,7 @@
 		return;
 	}
 	ABRecord *record = [CPSABManagedObject abEntryFor:abObject];
-	ABMutableMultiValue *multiValue = [[[record valueForProperty:property]mutableCopy]autorelease];
+	ABMutableMultiValue *multiValue = [[record valueForProperty:property]mutableCopy];
 	NSUInteger primaryIndex = 0;
 	for(primaryIndex = 0; primaryIndex < [multiValue count]; primaryIndex++){
 		if([[multiValue labelAtIndex:primaryIndex] isEqualToString:label]){
@@ -586,7 +586,7 @@
 		[[ABAddressBook sharedAddressBook]save];
 	} else if(newValue != nil){
 		if(multiValue == nil){
-			multiValue = [[[ABMutableMultiValue alloc]init]autorelease];
+			multiValue = [[ABMutableMultiValue alloc]init];
 		}
 		[multiValue addValue:newValue withLabel:label];
 		[record setValue:multiValue forProperty:property];

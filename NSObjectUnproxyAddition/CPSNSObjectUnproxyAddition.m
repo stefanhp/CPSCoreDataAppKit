@@ -8,14 +8,16 @@
 
 #import "CPSNSObjectUnproxyAddition.h"
 
-@class _NSControllerObjectProxy;
+//@class _NSControllerObjectProxy;
 
 @implementation NSObject (ObjectUnproxyAddition)
 - (id)unproxy{
+    /*
 	if([self isKindOfClass:[_NSControllerObjectProxy class]]){
 		return [self valueForKey:@"unproxy"];
 	} else {
 		return self;
-	}
+	}*/
+    return self;
 }
 @end
